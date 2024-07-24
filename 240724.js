@@ -1,6 +1,6 @@
 // 1. 빈칸 채우기 문제
-let uninitialized;
-console.log(uninitialized); // 결과값 < undefined >
+// let uninitialized;
+// console.log(uninitialized); // 결과값 < undefined >
 // uninitialized에 대한 값이 정의되지 않은 상태에서 console.log를 통해 출력을 진행하였기 때문이다.
 
 // const apple = "사과";
@@ -51,15 +51,17 @@ cal(15, "/", 3); // 결과값 5
 
 // 5. 평균 점수 구하기
 const scores = [36, 62, 72, 55, 86, 95, 92, 48, 81];
+var avg = 0;
 
 function avgFunc(scores) {
   // 4번 문제의 계산기 함수를 활용한 코드를 작성해주세요.
   for (let i = 0; i < scores.length; i++) {
     scores[i] = cal(scores[i], "+", 3);
+    avg += scores[i];
   }
 }
 
 avgFunc(scores); // 함수 실행되는 부분이 없어서 추가..
 
-console.log(scores);
+console.log(scores + "반의 평균점수 :" + Math.floor(avg / scores.length));
 // 기대값: [39, 65, 75, 58, 89, 98, 95, 51, 84]
